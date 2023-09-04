@@ -1,14 +1,12 @@
 #include"main.h"
 void initializeStack(Stack *s)
 {
-    node = malloc(sizeof(Stack));
-    if (!node)
-        return(NULL);
-   s= node;
-
+    *(s)->n = NULL;
+    *(s)->next= NULL;
 }
 void push(Stack *s, int value)
 {
+    Stack *node;
     node = malloc(sizeof(Stack));
 	if (!node)
 		return (NULL);
